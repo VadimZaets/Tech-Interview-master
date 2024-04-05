@@ -7,7 +7,7 @@ export const useGetProfile = () => {
       name: "John Smith",
       avatar: "https://tipaw.com/assets/Pierre-7VHVR6YF.webp",
       globalProgress: 100, // %
-      litterVerified: false,
+      litterVerified: true,
       parentsVerified: true,
       profilePictureIsVerified: true,
       verified: true,

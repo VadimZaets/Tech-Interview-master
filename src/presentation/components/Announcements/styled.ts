@@ -10,7 +10,11 @@ export const AnnouncementsContainer = styled.div`
   background-color: ${theme.color.light.default};
   border: ${theme.color.border};
   border-radius: 4px;
-  padding: 40px;
+  padding: 20px;
+  @media (min-width: 768px) {
+    padding: 40px;
+   }
+  
 `;
 export const AnnouncementsTitleWrap = styled.div`
    display: flex;

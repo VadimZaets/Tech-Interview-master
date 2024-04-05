@@ -18,7 +18,9 @@ export const globalStyles = `
  h6 {
   margin: 0;
 }
-
+a{
+  text-decoration:none;
+}
 `;
 
 export const PageWrapper = styled.div``;

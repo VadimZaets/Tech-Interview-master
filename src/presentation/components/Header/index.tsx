@@ -13,8 +13,17 @@ export const Header = ({ name, avatar }: Props) => {
     <Styled.HeaderContainer>
       <Styled.HeaderLogo>My Tipaw</Styled.HeaderLogo>
       <Styled.HeaderNavigationWrapper>
-        <div>Fr - Nl</div>
-        <Styled.HeaderNavigationMessage to="/">
+        <Styled.HeaderLocalizationWrap>
+          <Styled.HeaderLocalizationLink to="#">
+             Fr
+          </Styled.HeaderLocalizationLink>
+          <Styled.HeaderDot></Styled.HeaderDot>
+          <Styled.HeaderLocalizationLink to="#">
+            Nl
+          </Styled.HeaderLocalizationLink>
+           
+          </Styled.HeaderLocalizationWrap>
+        <Styled.HeaderNavigationMessage to="#">
           <TbBell />
         </Styled.HeaderNavigationMessage>
         <Styled.HeaderAccountWrapper>
