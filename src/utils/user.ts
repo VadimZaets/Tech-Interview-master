@@ -1,0 +1,1 @@
+export const headerUserName = (name:string) => name.length > 10 ? `${name.slice(0, 9)}...` : name;

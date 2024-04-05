@@ -82,7 +82,6 @@ export const ProgressBarPercent = styled.p`
   line-height: 24px;
   color: ${theme.color.green.default};
 `;
-
 export const ProgressBarWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

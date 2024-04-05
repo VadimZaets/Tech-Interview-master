@@ -48,6 +48,7 @@ export const AccordionItem = styled.div`
 export const AccordionHeaderContainer = styled(Card.Header)`
   background-color: ${theme.color.blue.default};
   padding: 12px 24px;
+  cursor: pointer;
 `;
 export const AccordionHeader = styled.div`
   display: flex;

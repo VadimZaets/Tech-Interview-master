@@ -3,6 +3,7 @@ import { TbBell } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
+import { headerUserName } from "../../../utils/user";
 
 type Props = {
   name: string;
@@ -10,11 +11,14 @@ type Props = {
 };
 export const Header = ({ name, avatar }: Props) => {
   const theme = useTheme();
-  const [activeLng, setActiveLng] = useState("fr");
-  const displayName = name.length > 10 ? `${name.slice(0, 9)}...` : name;
+  const frLng = 'fr'
+  const nlLng = 'nl'
+  const [activeLng, setActiveLng] = useState(frLng);
+
   const handleLng = (lng: string) => {
     setActiveLng(lng);
   };
+  
   return (
     <Styled.HeaderContainer>
       <Styled.HeaderLogo>My Tipaw</Styled.HeaderLogo>
@@ -23,9 +27,9 @@ export const Header = ({ name, avatar }: Props) => {
           <Styled.HeaderLocalizationLink
             to="#"
             style={{
-              color: activeLng === "fr" ? theme.color.blue.default : "",
+              color: activeLng === frLng ? theme.color.blue.default : "",
             }}
-            onClick={() => handleLng("fr")}
+            onClick={() => handleLng(frLng)}
           >
             Fr
           </Styled.HeaderLocalizationLink>
@@ -33,9 +37,9 @@ export const Header = ({ name, avatar }: Props) => {
           <Styled.HeaderLocalizationLink
             to="#"
             style={{
-              color: activeLng === "nl" ? theme.color.blue.default : "",
+              color: activeLng === nlLng ? theme.color.blue.default : "",
             }}
-            onClick={() => handleLng("nl")}
+            onClick={() => handleLng(nlLng)}
           >
             Nl
           </Styled.HeaderLocalizationLink>
@@ -45,7 +49,9 @@ export const Header = ({ name, avatar }: Props) => {
         </Styled.HeaderNavigationMessage>
         <Styled.HeaderAccountWrapper>
           <Styled.HeaderAccountImg src={avatar} alt="some guy with a dog" />
-          <Styled.HeaderAccountName>{displayName}</Styled.HeaderAccountName>
+          <Styled.HeaderAccountName>
+            {headerUserName(name)}
+          </Styled.HeaderAccountName>
           <IoIosArrowDown />
         </Styled.HeaderAccountWrapper>
       </Styled.HeaderNavigationWrapper>
