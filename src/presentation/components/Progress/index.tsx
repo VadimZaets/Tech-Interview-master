@@ -5,7 +5,7 @@ import { ProfileData } from "../../pages";
 
 export const Progress: FC<{ profile: ProfileData }> = ({ profile }) => {
   const [progressCount, setProgressCount] = useState(0);
-  const [percentCount, setPercentCount] = useState(0);
+  const targetProgress = 100;
 
   useEffect(() => {
     const count = Object.values(profile).filter(
@@ -13,24 +13,6 @@ export const Progress: FC<{ profile: ProfileData }> = ({ profile }) => {
     ).length;
 
     setProgressCount(count);
-    let percent = 0;
-    switch (count) {
-      case 1:
-        percent = 25;
-        break;
-      case 2:
-        percent = 50;
-        break;
-      case 3:
-        percent = 75;
-        break;
-      case 4:
-        percent = 100;
-        break;
-      default:
-        percent = 0;
-    }
-    setPercentCount(percent);
   }, [profile]);
 
   return (
@@ -40,7 +22,7 @@ export const Progress: FC<{ profile: ProfileData }> = ({ profile }) => {
           <Styled.GlobalProgressTitle>
             You successfully complete your profile at Tipaw
           </Styled.GlobalProgressTitle>
-          {percentCount === 100 && (
+          {profile.globalProgress === targetProgress && (
             <Styled.GlobalProgressText>
               Now you can use Tipaw for 100% 🎉
             </Styled.GlobalProgressText>
@@ -51,17 +33,25 @@ export const Progress: FC<{ profile: ProfileData }> = ({ profile }) => {
             <Styled.ProgressBarTitle>Profile Completed</Styled.ProgressBarTitle>
 
             <Styled.ProgressBarPercent>
-              {percentCount}%
+              {profile.globalProgress}%
             </Styled.ProgressBarPercent>
           </Styled.ProgressBarTextWrap>
           <Styled.ProgressBarWrapper>
-            <Styled.ProgressBarComponent now={progressCount >= 1 ? 100 : 0} />
+            <Styled.ProgressBarComponent
+              now={progressCount >= 1 ? targetProgress : 0}
+            />
 
-            <Styled.ProgressBarComponent now={progressCount >= 2 ? 100 : 0} />
+            <Styled.ProgressBarComponent
+              now={progressCount >= 2 ? targetProgress : 0}
+            />
 
-            <Styled.ProgressBarComponent now={progressCount >= 3 ? 100 : 0} />
+            <Styled.ProgressBarComponent
+              now={progressCount >= 3 ? targetProgress : 0}
+            />
 
-            <Styled.ProgressBarComponent now={progressCount >= 4 ? 100 : 0} />
+            <Styled.ProgressBarComponent
+              now={progressCount >= 4 ? targetProgress : 0}
+            />
           </Styled.ProgressBarWrapper>
         </Styled.ProgressBarContainer>
       </Styled.GlobalProgressContainer>

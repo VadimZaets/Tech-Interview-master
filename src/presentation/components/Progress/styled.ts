@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { theme } from "../../../application/theme";
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 export const CompleteSection = styled.div`
   background-color: ${theme.color.light.default};
@@ -15,17 +15,23 @@ export const GlobalProgressContainer = styled.div`
   align-items: center;
   padding: 20px;
   border-bottom: ${theme.color.border};
-  @media (min-width: 768px) { 
-    padding: 40px;
+  @media (min-width: 768px) {
+    padding: 31px 44px;
     flex-direction: row;
   }
 `;
 export const GlobalProgressTextContainer = styled.div`
- min-height:64px ;
- margin-bottom: 20px;
- @media (min-width: 768px) { 
+  height: 88px;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
     margin-bottom: 0;
- }
+    width: 250px;
+  }
+  @media (min-width: 1200px) {
+    width: 100%;
+    height: 60px;
+  }
 `;
 export const GlobalProgressTitle = styled.h3`
   font-size: 18px;
@@ -41,79 +47,76 @@ export const GlobalProgressText = styled.p`
   color: ${theme.color.dark.shadeLighter};
 `;
 export const ProgressBarContainer = styled.div`
-width: 100%;
-min-height:64px ;
-@media (min-width: 768px) { width: 336px}
-  
+  width: 100%;
+  height: 64px;
+  @media (min-width: 768px) {
+    width: 250px;
+  }
+  @media (min-width: 1200px) {
+    width: 469px;
+  }
 `;
 export const ProgressBarTextWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 32px;
-
 `;
 export const ProgressBarTitle = styled.p`
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
-
 `;
 export const ProgressBarPercent = styled.p`
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   color: ${theme.color.green.default};
-
 `;
 
 export const ProgressBarWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 4px;
-
-  
-  
-  
 `;
 export const ProgressBarComponent = styled(ProgressBar)`
   width: 100%;
   height: 8px;
-  & > .progress-bar{
+  & > .progress-bar {
     background-color: ${theme.color.green.default};
   }
-  
-  
 `;
 export const ProgressContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 20px;
   padding: 20px;
- 
-  @media (min-width: 768px) { 
+
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 32px;
     padding: 40px;
-}
+  }
 
-@media (min-width: 1200px) { 
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
-    
-}
-
-  
- 
+  }
 `;
 export const ProgressItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 140px;
+  height: 148px;
   padding: 24px;
   border: ${theme.color.border};
-  border-radius:4px ;
-  box-shadow: -1px 3px 16px 0px #959DA530;
+  border-radius: 4px;
+  box-shadow: -1px 3px 16px 0px #959da530;
+  @media (min-width: 1200px) {
+    width: 245px;
+  }
+  @media (min-width: 1440px) {
+    width: 100%;
+  }
 `;
 export const ProgressCheck = styled.div`
   display: flex;
@@ -121,21 +124,21 @@ export const ProgressCheck = styled.div`
   justify-content: center;
   width: 24px;
   height: 24px;
-  border-radius:50px;
+  border-radius: 50px;
   background-color: ${theme.color.green.default};
-  margin-bottom:16px;
+  margin-bottom: 16px;
   & > svg {
     color: ${theme.color.light.default};
   }
 `;
 export const ProgressTitle = styled.h3`
-font-size: 14px;
-font-weight: 700;
-line-height: 24px;
-margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 8px;
 `;
 export const ProgressText = styled.p`
-font-size: 12px;
-font-weight: 400;
-line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
 `;

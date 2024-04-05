@@ -24,7 +24,7 @@ export const HeaderNavigationWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (min-width: 768px) {
-    width: 308px;
+    width: 320px;
   }
 `;
 export const HeaderLocalizationWrap = styled.div`
@@ -32,7 +32,7 @@ export const HeaderLocalizationWrap = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 50px;
+  width: 60px;
 `;
 export const HeaderLocalizationLink = styled(Link)`
   font-size: 14px;

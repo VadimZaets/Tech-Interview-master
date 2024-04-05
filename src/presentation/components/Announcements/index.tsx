@@ -5,37 +5,37 @@ import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import { AnnouncementData } from "../../pages";
 import { IoIosArrowDown } from "react-icons/io";
+import { TbCalendarEvent } from "react-icons/tb";
 
 type CustomToggleProps = {
   children: string;
   eventKey: string;
 };
+function CustomToggle({ children, eventKey }: CustomToggleProps) {
+  const decoratedOnClick = useAccordionButton(eventKey);
+
+  return (
+    <Styled.AccordionHeader onClick={decoratedOnClick}>
+      <Styled.AccordionHeaderTitle>{children}</Styled.AccordionHeaderTitle>
+      <IoIosArrowDown />
+    </Styled.AccordionHeader>
+  );
+}
 
 export const Announcements: FC<{ announcements: AnnouncementData[] }> = ({
   announcements,
 }) => {
-  function CustomToggle({ children, eventKey }: CustomToggleProps) {
-    const decoratedOnClick = useAccordionButton(eventKey, () =>
-      console.log("totally custom!")
-    );
-
-    return (
-      <Styled.AccordionHeader onClick={decoratedOnClick}>
-        <Styled.AccordionHeaderTitle>{children}</Styled.AccordionHeaderTitle>
-        <IoIosArrowDown />
-      </Styled.AccordionHeader>
-    );
-  }
+  
 
   return (
     <Styled.AnnouncementsContainer>
       <Styled.AnnouncementsTitleWrap>
-      <Styled.AnnouncementsTitle>
-        Announcements from TIPAW <span></span>
-      </Styled.AnnouncementsTitle>
-       <Styled.RedDot></Styled.RedDot>
+        <Styled.AnnouncementsTitle>
+          Announcements from TIPAW <span></span>
+        </Styled.AnnouncementsTitle>
+        <Styled.RedDot></Styled.RedDot>
       </Styled.AnnouncementsTitleWrap>
-      <Accordion  defaultActiveKey="0">
+      <Accordion defaultActiveKey="0">
         {announcements.map((announcement, index) => (
           <Styled.AccordionCollapse>
             <Styled.AccordionHeaderContainer>
@@ -44,11 +44,13 @@ export const Announcements: FC<{ announcements: AnnouncementData[] }> = ({
               </CustomToggle>
             </Styled.AccordionHeaderContainer>
             <Accordion.Collapse eventKey={index.toString()}>
-              <Card.Body>
+              <Styled.AccordionTextContainer>
+             
+                <Styled.AccordionDate> <TbCalendarEvent /> {announcement.date}</Styled.AccordionDate>
                 <Styled.AccordionText>
-                {announcement.content}
+                  {announcement.content}
                 </Styled.AccordionText>
-                </Card.Body>
+              </Styled.AccordionTextContainer>
             </Accordion.Collapse>
           </Styled.AccordionCollapse>
         ))}
