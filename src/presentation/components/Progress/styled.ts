@@ -7,7 +7,6 @@ export const CompleteSection = styled.div`
   border: ${theme.color.border};
   border-radius: 4px;
 `;
-
 export const GlobalProgressContainer = styled.div`
   display: flex;
   flex-direction: column;

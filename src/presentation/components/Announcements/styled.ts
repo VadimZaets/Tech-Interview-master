@@ -69,7 +69,6 @@ export const AccordionHeader = styled.div`
     transition: all 0.4s;
   }
 `;
-
 export const AccordionHeaderTitle = styled.h3`
   font-size: 12px;
   font-weight: 700;
@@ -79,12 +78,10 @@ export const AccordionHeaderTitle = styled.h3`
   }
   color: ${theme.color.light.default};
 `;
-
 export const AccordionCollapse = styled(Card)`
   border: ${theme.color.accentBorder};
   overflow: hidden;
 `;
-
 export const AccordionDate = styled.p`
   display: flex;
   align-items: center;

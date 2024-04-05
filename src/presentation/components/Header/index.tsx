@@ -11,14 +11,14 @@ type Props = {
 };
 export const Header = ({ name, avatar }: Props) => {
   const theme = useTheme();
-  const frLng = 'fr'
-  const nlLng = 'nl'
+  const frLng = "fr";
+  const nlLng = "nl";
   const [activeLng, setActiveLng] = useState(frLng);
 
   const handleLng = (lng: string) => {
     setActiveLng(lng);
   };
-  
+
   return (
     <Styled.HeaderContainer>
       <Styled.HeaderLogo>My Tipaw</Styled.HeaderLogo>
