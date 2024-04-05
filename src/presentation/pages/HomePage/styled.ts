@@ -22,7 +22,6 @@ a{
   text-decoration:none;
 }
 `;
-
 export const Layout = styled.div`
   display: flex;
   flex-direction: column;
