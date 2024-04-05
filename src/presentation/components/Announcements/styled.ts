@@ -20,14 +20,21 @@ export const AnnouncementsTitleWrap = styled.div`
   margin-bottom: 32px;
 `;
 export const AnnouncementsTitle = styled.h3`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   margin-right: 16px;
+  @media (min-width: 375px) {
+    font-size: 18px;
+  }
   color: ${theme.color.blue.default};
 `;
 export const RedDot = styled.div`
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
+  @media (min-width: 375px) {
+    width: 10px;
+    height: 10px;
+  }
   border-radius: 50px;
   background-color: red;
 `;
@@ -50,17 +57,25 @@ export const AccordionHeader = styled.div`
   background-color: transparent;
 
   & > svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: 375px) {
+      width: 24px;
+      height: 24px;
+    }
     color: ${theme.color.light.default};
     transition: all 0.4s;
   }
 `;
 
 export const AccordionHeaderTitle = styled.h3`
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 24px;
+  @media (min-width: 375px) {
+    font-size: 16px;
+  }
   color: ${theme.color.light.default};
 `;
 
@@ -88,7 +103,13 @@ export const AccordionTextContainer = styled(Card.Body)`
   padding: 16px 24px;
 `;
 export const AccordionText = styled.p`
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
+  @media (min-width: 375px) {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
   color: ${theme.color.medium.shade};
 `;

@@ -12,17 +12,24 @@ export const HeaderContainer = styled.div`
   border-bottom: ${theme.color.border};
 `;
 export const HeaderLogo = styled.h2`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+
+  @media (min-width: 375px) {
+    font-size: 18px;
+  }
   cursor: pointer;
 `;
 export const HeaderNavigationWrapper = styled.div`
-  width: 170px;
+  width: 146px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 375px) {
+    width: 170px;
+  }
   @media (min-width: 768px) {
     width: 320px;
   }
@@ -32,7 +39,10 @@ export const HeaderLocalizationWrap = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 58px;
+  width: 50px;
+  @media (min-width: 375px) {
+    width: 58px;
+  }
 `;
 export const HeaderLocalizationLink = styled(Link)`
   font-size: 14px;
@@ -40,6 +50,7 @@ export const HeaderLocalizationLink = styled(Link)`
   line-height: 16px;
   color: ${theme.color.medium.shade};
   transition: all 0.4s;
+
   @media (min-width: 1200px) {
     &:hover {
       color: ${theme.color.blue.default};
@@ -101,7 +112,7 @@ export const HeaderAccountImg = styled.img`
   height: 40px;
   border-radius: 50%;
   @media (min-width: 768px) {
-  margin-right: 8px;
+    margin-right: 8px;
   }
 `;
 export const HeaderAccountName = styled.p`

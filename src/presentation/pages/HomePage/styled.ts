@@ -25,14 +25,9 @@ a{
 
 export const PageWrapper = styled.div``;
 
-
 export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   padding: 40px 24px 24px;
   gap: 48px;
 `;
-
-
-
-

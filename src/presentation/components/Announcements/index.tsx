@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import * as Styled from "./styled";
 import { useAccordionButton } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
 import { AnnouncementData } from "../../pages";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbCalendarEvent } from "react-icons/tb";
@@ -25,13 +24,11 @@ function CustomToggle({ children, eventKey }: CustomToggleProps) {
 export const Announcements: FC<{ announcements: AnnouncementData[] }> = ({
   announcements,
 }) => {
-  
-
   return (
     <Styled.AnnouncementsContainer>
       <Styled.AnnouncementsTitleWrap>
         <Styled.AnnouncementsTitle>
-          Announcements from TIPAW <span></span>
+          Announcements from Tipaw <span></span>
         </Styled.AnnouncementsTitle>
         <Styled.RedDot></Styled.RedDot>
       </Styled.AnnouncementsTitleWrap>
@@ -45,8 +42,10 @@ export const Announcements: FC<{ announcements: AnnouncementData[] }> = ({
             </Styled.AccordionHeaderContainer>
             <Accordion.Collapse eventKey={index.toString()}>
               <Styled.AccordionTextContainer>
-             
-                <Styled.AccordionDate> <TbCalendarEvent /> {announcement.date}</Styled.AccordionDate>
+                <Styled.AccordionDate>
+                  {" "}
+                  <TbCalendarEvent /> {announcement.date}
+                </Styled.AccordionDate>
                 <Styled.AccordionText>
                   {announcement.content}
                 </Styled.AccordionText>

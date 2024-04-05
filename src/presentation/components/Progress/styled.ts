@@ -34,16 +34,22 @@ export const GlobalProgressTextContainer = styled.div`
   }
 `;
 export const GlobalProgressTitle = styled.h3`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
+  @media (min-width: 375px) {
+    font-size: 18px;
+  }
   color: ${theme.color.blue.default};
   margin-bottom: 13px;
 `;
 export const GlobalProgressText = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 24px;
+  @media (min-width: 375px) {
+    font-size: 14px;
+  }
   color: ${theme.color.dark.shadeLighter};
 `;
 export const ProgressBarContainer = styled.div`
@@ -63,9 +69,12 @@ export const ProgressBarTextWrap = styled.div`
   margin-bottom: 32px;
 `;
 export const ProgressBarTitle = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  @media (min-width: 375px) {
+    font-size: 18px;
+  }
 `;
 export const ProgressBarPercent = styled.p`
   font-size: 14px;
