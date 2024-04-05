@@ -30,7 +30,7 @@ export const Progress: FC<{ profile: ProfileData }> = ({ profile }) => {
         </Styled.GlobalProgressTextContainer>
         <Styled.ProgressBarContainer>
           <Styled.ProgressBarTextWrap>
-            <Styled.ProgressBarTitle>Profile Completed</Styled.ProgressBarTitle>
+            <Styled.ProgressBarTitle>Profile completed</Styled.ProgressBarTitle>
 
             <Styled.ProgressBarPercent>
               {profile.globalProgress}%

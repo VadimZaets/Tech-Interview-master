@@ -10,7 +10,7 @@ export const AnnouncementsContainer = styled.div`
   border-radius: 4px;
   padding: 20px;
   @media (min-width: 768px) {
-    padding: 39px 44px;
+    padding: 40px 38px 42px 38px;
   }
 `;
 export const AnnouncementsTitleWrap = styled.div`
@@ -85,7 +85,7 @@ export const AccordionDate = styled.p`
   }
 `;
 export const AccordionTextContainer = styled(Card.Body)`
-  padding: 22px 24px;
+  padding: 16px 24px;
 `;
 export const AccordionText = styled.p`
   font-size: 16px;

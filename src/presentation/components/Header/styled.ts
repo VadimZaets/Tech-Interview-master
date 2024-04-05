@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 16px 28px 24px 24px;
   background-color: ${theme.color.light.default};
   border-bottom: ${theme.color.border};
 `;
@@ -32,7 +32,7 @@ export const HeaderLocalizationWrap = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60px;
+  width: 58px;
 `;
 export const HeaderLocalizationLink = styled(Link)`
   font-size: 14px;
@@ -100,13 +100,15 @@ export const HeaderAccountImg = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  @media (min-width: 768px) {
   margin-right: 8px;
+  }
 `;
 export const HeaderAccountName = styled.p`
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
-  margin-right: 20px;
+  margin-right: 16px;
   transition: all 0.4s;
   display: none;
   @media (min-width: 768px) {
