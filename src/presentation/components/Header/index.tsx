@@ -3,7 +3,7 @@ import { TbBell } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import { useTheme } from "@emotion/react";
-import { headerUserName } from "../../../utils/user";
+import { headerUserName } from "../../../utils";
 
 type Props = {
   name: string;
